@@ -54,8 +54,9 @@ export const App = () => {
             <button
               key={field}
               type="button"
-              className={classNames('button is-info is-light', {
-                'button is-info no-light': fieldName === field,
+              className={classNames('button', 'is-info', {
+                'is-light': fieldName !== field,
+                'no-light': fieldName === field,
               })}
               onClick={() => {
                 sortBy(field);
